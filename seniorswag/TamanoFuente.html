@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejemplo font-size responsivo</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+    line-height: 1.5;
+}
+
+/* Diferentes combinaciones de calc() */
+p.small-change {
+    font-size: calc(1em + 0.5vw);
+    border: 1px solid #007BFF;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+p.medium-change {
+    font-size: calc(1em + 1.5vw);
+    border: 1px solid #28a745;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+p.big-change {
+    font-size: calc(1em + 2vw);
+    border: 1px solid #dc3545;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+</style>
+</head>
+<body>
+<h1>Demostración de font-size con calc() y vw</h1>
+
+<p class="small-change">
+  Cambia poco: <code>font-size: calc(1em + 0.5vw)</code>
+</p>
+
+<p class="medium-change">
+  Cambio moderado: <code>font-size: calc(1em + 1.5vw)</code>
+</p>
+
+<p class="big-change">
+  Cambio evidente: <code>font-size: calc(1em + 2vw)</code>
+</p>
+
+<p>Arrastra el ancho de la ventana para ver cómo crece cada texto.</p>
+</body>
+</html>
