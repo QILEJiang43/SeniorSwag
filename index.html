@@ -7,13 +7,39 @@
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Tus hojas de estilo -->
+  <link rel="stylesheet" href="animacion back.css">
+  <link rel="stylesheet" href="modofosc.css">
 </head>
 
 <body>
+  <!-- Fondo animado detrás de todo -->
+  <div class="background-animation"></div>
+
   <!-- CABECERA -->
   <header class="bg-dark text-white py-3 shadow-sm">
     <div class="container d-flex flex-wrap justify-content-between align-items-center">
-      <h1 class="h3 m-0 fw-bold">$enior $wag</h1>
+      <div class="d-flex align-items-center">
+        <h1 class="h3 m-0 fw-bold">$enior $wag</h1>
+
+        <!-- SWITCH MODO OSCURO -->
+        <label class="switch ms-3">
+          <input id="checkbox" type="checkbox" checked />
+          <span class="slider">
+            <div class="star star_1"></div>
+            <div class="star star_2"></div>
+            <div class="star star_3"></div>
+          </span>
+          <svg viewBox="0 0 16 16" class="cloud">
+            <path
+              transform="matrix(.77976 0 0 .78395-299.99-418.63)"
+              fill="#fff"
+              d="m391.84 540.91c-.421-.329-.949-.524-1.523-.524-1.351 0-2.451 1.084-2.485 2.435-1.395.526-2.388 1.88-2.388 3.466 0 1.874 1.385 3.423 3.182 3.667v.034h12.73v-.006c1.775-.104 3.182-1.584 3.182-3.395 0-1.747-1.309-3.186-2.994-3.379.007-.106.011-.214.011-.322 0-2.707-2.271-4.901-5.072-4.901-2.073 0-3.856 1.202-4.643 2.925"
+            ></path>
+          </svg>
+        </label>
+      </div>
 
       <!-- Navegación -->
       <nav class="mt-2 mt-sm-0">
@@ -32,7 +58,6 @@
     <div class="container">
       <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-          <!-- Slide 1 -->
           <div class="carousel-item active">
             <img src="fotos/Rio_Cardenas.jpg" class="d-block w-100" alt="Promoción 1">
             <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
@@ -40,8 +65,6 @@
               <p>La mejor moda urbana y moderna, para todos los estilos.</p>
             </div>
           </div>
-
-          <!-- Slide 2 -->
           <div class="carousel-item">
             <img src="fotos/seebensee-2384369-810x540.jpg" class="d-block w-100" alt="Promoción 2">
             <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
@@ -49,8 +72,6 @@
               <p>Encuentra tu estilo único cada temporada.</p>
             </div>
           </div>
-
-          <!-- Slide 3 -->
           <div class="carousel-item">
             <img src="fotos/pexels-souvenirpixels-417074.jpg" class="d-block w-100" alt="Promoción 3">
             <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
@@ -59,16 +80,12 @@
             </div>
           </div>
         </div>
-
-        <!-- Controles -->
         <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon"></span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
           <span class="carousel-control-next-icon"></span>
         </button>
-
-        <!-- Indicadores -->
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
           <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
@@ -82,9 +99,7 @@
   <section id="productos" class="py-5">
     <div class="container">
       <h2 class="text-center mb-5 fw-bold">Nuestros Productos</h2>
-
       <div class="row g-4 justify-content-center">
-        <!-- Producto 1 -->
         <div class="col-12 col-md-4 col-lg-3">
           <article class="card h-100 text-center">
             <img src="fotos/abuelaamarilla.jpg" class="card-img-top" alt="Conjunto Diva Bee">
@@ -95,8 +110,6 @@
             </div>
           </article>
         </div>
-
-        <!-- Producto 2 -->
         <div class="col-12 col-md-4 col-lg-3">
           <article class="card h-100 text-center">
             <img src="fotos/abuelorosa.jpg" class="card-img-top" alt="Conjunto Pink Demon">
@@ -107,8 +120,6 @@
             </div>
           </article>
         </div>
-
-        <!-- Producto 3 -->
         <div class="col-12 col-md-4 col-lg-3">
           <article class="card h-100 text-center">
             <img src="fotos/abuelocamuflaje.jpg" class="card-img-top" alt="Conjunto Fashion Hunter">
@@ -119,8 +130,6 @@
             </div>
           </article>
         </div>
-
-        <!-- Producto 4 -->
         <div class="col-12 col-md-4 col-lg-3">
           <article class="card h-100 text-center">
             <img src="fotos/abuelorojo.jpg" class="card-img-top" alt="Conjunto Red Skeleton">
@@ -140,7 +149,6 @@
     <div class="container">
       <h2 class="text-center mb-4">Contacto</h2>
       <p class="text-center mb-4">¿Tienes alguna duda? Escríbenos y te responderemos lo antes posible.</p>
-
       <div class="row justify-content-center">
         <div class="col-12 col-md-8 col-lg-6">
           <form action="#" method="post" class="p-4 border rounded-3 bg-white shadow-sm">
@@ -148,17 +156,14 @@
               <label for="nombre" class="form-label">Nombre</label>
               <input type="text" id="nombre" name="nombre" class="form-control" required>
             </div>
-
             <div class="mb-3">
               <label for="email" class="form-label">Correo electrónico</label>
               <input type="email" id="email" name="email" class="form-control" required>
             </div>
-
             <div class="mb-3">
               <label for="mensaje" class="form-label">Mensaje</label>
               <textarea id="mensaje" name="mensaje" class="form-control" rows="4" required></textarea>
             </div>
-
             <button type="submit" class="btn btn-dark w-100">Enviar</button>
           </form>
         </div>
@@ -186,7 +191,15 @@
     </div>
   </footer>
 
-  <!-- Bootstrap JS (necesario para el carrusel) -->
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS Modo Oscuro -->
+  <script>
+    const checkbox = document.getElementById("checkbox");
+    checkbox.addEventListener("change", () => {
+      document.body.classList.toggle("modo-oscuro", checkbox.checked);
+    });
+  </script>
 </body>
 </html>

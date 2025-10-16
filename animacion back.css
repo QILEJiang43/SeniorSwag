@@ -1,0 +1,54 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto; /* permite crecer según el contenido */
+  overflow-x: hidden; /* solo bloquea scroll horizontal */
+}
+
+/* Fondo animado fijo */
+.background-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* detrás del contenido */
+  background: #121212;
+  background: linear-gradient(
+    135deg,
+    #121212 25%,
+    #1a1a1a 25%,
+    #1a1a1a 50%,
+    #121212 50%,
+    #121212 75%,
+    #1a1a1a 75%,
+    #1a1a1a
+  );
+  background-size: 40px 40px;
+  animation: move 4s linear infinite;
+}
+
+/* Animación del patrón */
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .background-animation {
+    background-size: 25px 25px;
+    animation: move 3s linear infinite;
+  }
+}
+
+@media (min-width: 1200px) {
+  .background-animation {
+    background-size: 60px 60px;
+  }
+}
